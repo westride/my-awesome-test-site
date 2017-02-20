@@ -227,10 +227,13 @@ h6 {
   font-size: 1.4rem;
   font-weight: 600; }
 
+.small-header {
+  font-size: 1.7rem; }
+
 .medium-header {
   font-size: 2.0rem; }
 
-.standard-large-header {
+.large-header {
   font-size: 3.2rem; }
 
 /* Larger than phablet */
@@ -780,7 +783,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px; }
+  margin-bottom: 100px; }
 
 .footer {
   position: absolute;
@@ -788,7 +791,7 @@ body {
   left: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 100px;
   background-color: #f5f5f5; }
   .footer .footer-column {
     margin: 20px 0;
@@ -807,9 +810,14 @@ body {
 /**
  * Index page styles
  */
+ 
 .index-section {
   border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
   margin-bottom: 40px; }
+
+  .index-section:last-child {
+    border-bottom: none; }
 
 /**
  * Post page styles for post content and post layout

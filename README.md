@@ -1,16 +1,25 @@
-# Jekyll Seed
+# Your first static site (with Jekyll!)
 
 A starting frame for a Jekyll site.
 
-[Jekyll documentation is here.](https://jekyllrb.com/)
+<hr>
+
+## Things this static site builder is using, that you should get familiar with
+
+* This project is a Jekyll site, which is a lightweight framework for building static sites. [Jekyll documentation is here.](https://jekyllrb.com/)
+* To make a copy of this project and to deploy it live, you'll need a [Github account](https://github.com/join), and you'll need to have [git installed](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git) in your development environment. [Git resources are here.](http://stackforyourself.com/comp-sci/2016/05/01/github/)
+* Although this Jekyll site builds its pages in partial pieces, those pieces are still made out of [HTML](http://stackforyourself.com/front-end/2016/06/01/front-end-part-1-html-css-dom/).
+* Styling is done with [CSS](http://stackforyourself.com/front-end/2016/06/01/front-end-part-1-html-css-dom/), and the main stylesheet is `assets/stylesheets/main.css`.
+* [JavaScript](http://stackforyourself.com/front-end/2016/06/01/javascript-uncategorized/) is also involved in this project, but only to manage hiding and showing the main navbar mobile menu icon.
+* Jekyll uses [liquid](https://help.shopify.com/themes/liquid/basics), a templating language developed by [Shopify](https://www.shopify.com/). Check out `_layouts/post.html` to start to see how liquid works.
 
 <hr>
 
-## Dependencies
+## Installations
 
-**If you're on a Mac**: Run `./install-script.sh` to install NPM dependencies, Jekyll, and Sass. This will also check to make sure you have Homebrew, Ruby, and Node installed as well, and if not, will download them for you.
+**If you're on a Mac**: Run `./install-script.sh` to install all dependencies. This will run a check to make sure you have Homebrew, Ruby, git, and Jekyll installed, and if not, will download and install them for you.
 
-**If you're on a Windows or Linux computer**: please be sure to have Ruby, Rubygems, Jekyll and Sass gems, Node, npm, and Grunt installed. The `install-script.sh` file made for Mac terminals will not work for you.
+**If you're on a Windows or Linux computer**: please be sure to have Ruby, Rubygems, the Jekyll gem, and Git installed. The `install-script.sh` file is written for Macs, and will not work for you.
 
 <hr>
 
@@ -22,54 +31,16 @@ Check out the `_config.yml` file first, to set your variables. This config file 
 
 **On Cloud9:** Run `jekyll serve --host $IP --port $PORT --baseurl ''` to serve on Cloud9.
 
-In a separate terminal tab/window, run `grunt watch` to watch for changes in `assets/development/stylesheets` and compile your Sass files into CSS, the result of which is your styles end up in `assets/production/main.css.min` and included in your site's `head` tag.
+This starts serving your site locally. To view, go to [localhost:4000](http://localhost:4000). You'll know your site is running locally if you see a nice site with a 'Hello, world!' heading.
 
 <hr>
 
-## Includes:
+## Included goodies
 
-* File tree with `_data/`, `_includes/`, `_layouts/`, `_posts/`, `_static/`, `assets/`, `category/`, and `tag/` subfolders.
-* Asset setup with Sass. Grunt setup for managing assets.
-* Initial categories and tags structures, and corresponding layouts.
-* Includes `_includes/klipse.html` script, to use with embedding runnable code (!!) directly in your site pages or posts. Check out [klipse](https://github.com/viebel/klipse) for more information.
-
-<hr>
-
-## Assets
-
-Assets are broken down into two folders, `production/` and `development/`, to allow you to differentiate between normal and uglified JavaScript, your Sass files vs your compiled and minified CSS files, your original images vs the resized final images.
-
-That way you can link all assets as coming from the `production/` folder after running the appropriate Grunt script to update the contents of your `production/` folder based on files/changes made to `development/` folder contents.
-
-Also included with assets:
-* FontAwesome files.
-* `_includes/icon-github.html` and `_includes/icon-twitter.html` icons.
-
-### Adding new assets
-
-Add new Sass files to `assets/development/stylesheets` and import them into the main Sass file.
-
-Add new images to `assets/development/images`, then run `grunt` (or `grunt resize`) to make a copy of your newly added image, resize it, and place it into `assets/production/images` for you.
-
-Add new JavaScript files to `assets/development/javascript`, then run `grunt` (or `grunt uglify`) to make a copy of your new JS files, compress/uglify it, and place it into `assets/production/javascript` for you.
-
-<hr>
-
-## Tags and Categories
-
-To view your current tags and categories, review the files in `_data/`.
-
-Each tag needs to have its own slug, name, and description, as well as its own file in `tag/` folder.
-
-The file needs to specify its frontmatter, such as:
-
-```
-layout: post-by-tag
-tag: [your-tag-slug]
-permalink: /tag/[your-tag-slug]/
-```
-
-Same concept with categories.
+Assets include:
+* A basic style frame based on [skeleton.css](http://getskeleton.com/)
+* A simple JavaScript file that hides and shows the mobile navbar link when page is viewed on smaller screens
+* FontAwesome icons
 
 <hr>
 
@@ -78,8 +49,10 @@ Same concept with categories.
 Add static pages to `_static/`, specifying frontmatter in each page. Example:
 
 ```
+---
 layout: page
-link-title: About
-page-title: About site and author
-permalink: /static/about/
+title: My Awesome Page
+static-page: true
+permalink: /my-awesome-page/
+---
 ```
