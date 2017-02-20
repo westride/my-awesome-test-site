@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% assign post = page %}
+
+<div class="container">
+  <article class="post">
+    <div class="post-page-header">
+      <h1 class="standard-large-header">{{ post.title }}</h1>
+
+      <div class="post-description">
+        {{ post.description }}
+      </div>
+    </div>
+
+    <div>
+      {{ content }}
+    </div>
+  </article>
+</div>

@@ -1,0 +1,25 @@
+<head>
+  <!-- Meta tags for the page -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{% if page.tag %}{{ site.data.tags[page.tag].name }}{% else %}{{ page.title }}{% endif %} &middot; {{ site.title }}{% endif %}</title>
+
+  <!-- Raleway font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <!-- FontAwesome files -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/font-awesome.min.css">
+
+  <!-- Site's compiled CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/main.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+
+  <!-- Site's JavaScript files, from assets/javascript folder -->
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/main.js"></script>
+
+</head>
