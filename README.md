@@ -17,9 +17,31 @@ A starting frame for a Jekyll site.
 
 ## Installations
 
-**If you're on a Mac**: Run `./install-script.sh` to install all dependencies. This will run a check to make sure you have Homebrew, Ruby, git, and Jekyll installed, and if not, will download and install them for you.
+1. Make a [cloud9](https://c9.io/signup) account.
 
-**If you're on a Windows or Linux computer**: please be sure to have Ruby, Rubygems, the Jekyll gem, and Git installed. The `install-script.sh` file is written for Macs, and will not work for you.
+2. Make a new workspace. Give it a name and a description.
+
+  Select the 'Public' option under 'Hosted Workspace'.
+
+  ![public_workspace](/assets/images/public_workspace.png)
+
+  In the 'Clone from Git' input, put the link to this repository:
+
+  ![clone_to_cloud_9](/assets/images/clone_to_cloud_9.png)
+
+  Choose the 'blank template' option:
+
+  ![blank_template](/assets/images/blank-template.png)
+
+  Click 'Create workspace'.
+
+3. Run `./install-script.sh` in the terminal to install all dependencies:
+
+  ![blank_template](/assets/images/run_installations.png)
+
+<br>
+
+**Are you trying to get setup on your local computer instead of Cloud9?** Come speak with me and I will help you with that.
 
 <hr>
 
